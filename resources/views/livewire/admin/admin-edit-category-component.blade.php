@@ -33,7 +33,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="col-md-4 control-label">Category Name</label>
+                                <label class="col-md-4 control-label"></label>
                                 <div class="col-md-4">
                                     <button class="btn btn-primary">Update</button>
                                 </div>
