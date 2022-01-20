@@ -29,7 +29,6 @@
                                 <label class="col-md-4 control-label" >Product Slug</label>
                                 <div class="col-md-4">
                                     <input type="text" placeholder="Product Slug" class="form-control input-md" wire:model="slug"/>
-                                    @error('slug')  <p class="text-danger">{{$message}}</p> @enderror
                                 </div>
                             </div>
                             <div class="form-group">
@@ -99,8 +98,8 @@
                                 <label class="col-md-4 control-label">Product Image</label>
                                 <div class="col-md-4">
                                     <input type="file" class="input-file" wire:model="newImage"/>
-                                    @error('image')  <p class="text-danger">{{$message}}</p> @enderror
                                     @if($newImage)
+                                        @error('image')  <p class="text-danger">{{$message}}</p> @enderror
                                         <img src="{{$newImage->temporaryUrl()}}" width="120" />
                                     @else
                                         <img src="{{ asset('assets/images/products') }}/{{$image}}" width="120" />
