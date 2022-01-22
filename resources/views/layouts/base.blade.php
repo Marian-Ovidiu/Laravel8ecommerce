@@ -94,6 +94,9 @@
                                                         <a title="Sale Setting" href=" {{ route('admin.sale') }}">Sale Setting</a>
                                                     </li>
                                                     <li class="menu-item" >
+                                                        <a title="Coupons" href=" {{ route('admin.coupons') }}">Coupons</a>
+                                                    </li>
+                                                    <li class="menu-item" >
                                                         <a title="Logout" href=" {{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();">Logout</a>
                                                     </li>
                                                     <form id="form-logout" method="POST" action="{{ route('logout') }}">

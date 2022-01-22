@@ -27,7 +27,10 @@ use App\Http\Livewire\Admin\AdminAddHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminEditHomeSliderComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoryComponent;
 use App\Http\Livewire\Admin\AdminSaleComponent;
-
+// Admin Coupons
+use App\Http\Livewire\Admin\AdminCouponsComponent;
+use App\Http\Livewire\Admin\AdminAddCouponComponent;
+use App\Http\Livewire\Admin\AdminEditCouponComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,9 +79,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 //For Admin
 Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('admin/dashboard/', AdminDashboardComponent::class)->name('admin.dashboard');
+
     Route::get('admin/categories/', AdminCategoryComponent::class)->name('admin.categories');
     Route::get('admin/category/add', AdminAddCategoryComponent::class)->name('admin.addcategory');
     Route::get('admin/category/edit/{category_slug}', AdminEditCategoryComponent::class)->name('admin.editcategory');
+
     Route::get('admin/products/', AdminProductComponent::class)->name('admin.products');
     Route::get('admin/product/add', AdminAddProductComponent::class)->name('admin.addproduct');
     Route::get('admin/product/edit/{product_slug}', AdminEditProductComponent::class)->name('admin.editproduct');
@@ -90,6 +95,9 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function(){
     Route::get('admin/home-categories', AdminHomeCategoryComponent::class)->name('admin.homecategories');
     Route::get('admin/sale', AdminSaleComponent::class)->name('admin.sale');
 
+    Route::get('admin/coupons/', AdminCouponsComponent::class)->name('admin.coupons');
+    Route::get('admin/coupon/add', AdminAddCouponComponent::class)->name('admin.addcoupon');
+    Route::get('admin/coupon/edit/{coupon_id}', AdminEditCouponComponent::class)->name('admin.editcoupon');
 
 });
 
