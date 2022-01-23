@@ -32,6 +32,9 @@ use App\Http\Livewire\Admin\AdminCouponsComponent;
 use App\Http\Livewire\Admin\AdminAddCouponComponent;
 use App\Http\Livewire\Admin\AdminEditCouponComponent;
 
+use App\Http\Livewire\Admin\ThankyouComponent;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -63,6 +66,9 @@ Route::get('/product-category/{category_slug}', CategoryComponent::class)->name(
 Route::get('/search', SearchComponent::class)->name("product.search");
 
 Route::get('/wishlist', WishlistComponent::class)->name("product.wishlist");
+
+Route::get('/thank-you', ThankyouComponent::class)->name("thankyou");
+
 
 
 
