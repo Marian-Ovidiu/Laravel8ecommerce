@@ -32,7 +32,7 @@ use App\Http\Livewire\Admin\AdminCouponsComponent;
 use App\Http\Livewire\Admin\AdminAddCouponComponent;
 use App\Http\Livewire\Admin\AdminEditCouponComponent;
 
-use App\Http\Livewire\Admin\ThankyouComponent;
+use App\Http\Livewire\ThankyouComponent;
 
 
 /*
